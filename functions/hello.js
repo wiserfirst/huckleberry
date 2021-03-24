@@ -3,6 +3,7 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: `Hello, ${name}`,
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ greeting: `Hello, ${name}` }),
   }
 }
