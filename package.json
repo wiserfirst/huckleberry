@@ -7,7 +7,8 @@
     "start": "parcel index.html"
   },
   "dependencies": {
-    "parcel": "1.12.3"
+    "parcel": "1.12.3",
+    "ulid": "^2.3.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.13.8"

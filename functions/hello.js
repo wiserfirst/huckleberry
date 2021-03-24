@@ -1,9 +1,9 @@
-exports.handler = async (event, context) => {
-  const name = event.queryStringParameters.name || 'World'
+const ULID = require('ulid')
 
+exports.handler = async (event, context) => {
   return {
     statusCode: 200,
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ greeting: `Hello, ${name}` }),
+    body: JSON.stringify({ ulid: ULID.ulid() }),
   }
 }
